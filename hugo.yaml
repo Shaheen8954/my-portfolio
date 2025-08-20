@@ -1,3 +1,69 @@
 baseURL: https://portfolio.shaheen.homes
 languageCode: en-us
 title: Shaheen's Portfolio
+theme: PaperMod
+
+# Site parameters
+params:
+  description: "Full-Stack Developer | Software Engineer | Tech Enthusiast"
+  author: "Shaheen"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  profileMode:
+    enabled: true
+    title: "Shaheen's Portfolio"
+    subtitle: "Full-Stack Developer & Software Engineer"
+    imageUrl: "<image/url>"
+    imageTitle: "Shaheen"
+    buttons:
+      - name: Projects
+        url: projects
+      - name: Blog
+        url: blogs
+      - name: About
+        url: about
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: |
+      I'm **Shaheen**, a passionate Full-Stack Developer and Software Engineer.
+      
+      I love building scalable applications and solving complex problems through clean, efficient code.
+      
+      Check out my [projects](/projects) and [blog](/blogs) to see my work!
+
+# Menu configuration
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: blogs
+      name: Blog
+      url: /blogs/
+      weight: 30
+
+# Social icons
+socialIcons:
+  - name: github
+    url: https://github.com/Shaheen8954
+  - name: linkedin
+    url: https://linkedin.com/in/shaheen8954
+  - name: email
+    url: mailto:contact@shaheen.homes
+
+# Security headers
+security:
+  enableInlineShortcodes: true
+  enableMissingTranslationPlaceholders: true

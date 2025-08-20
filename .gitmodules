@@ -1,3 +1,6 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/Shaheen8954/my-portfolio-pages.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git

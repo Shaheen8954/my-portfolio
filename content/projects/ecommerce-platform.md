@@ -4,6 +4,8 @@ description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL
 date: 2025-01-27
 draft: false
 tags: ["React", "Node.js", "PostgreSQL", "E-commerce", "Full-Stack"]
+showToc: true
+TocOpen: true
 ---
 
 # E-Commerce Platform

@@ -4,6 +4,8 @@ description: "Complete guide to building fast, secure websites with Hugo - the w
 date: 2025-01-27
 draft: false
 tags: ["Hugo", "Static Sites", "Web Development", "Tutorial"]
+showToc: true
+TocOpen: true
 ---
 
 # Getting Started with Hugo Static Site Generator

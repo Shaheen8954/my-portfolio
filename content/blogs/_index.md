@@ -3,6 +3,8 @@ title: "Blog"
 description: "Technical articles, tutorials, and insights about software development"
 date: 2025-01-27
 draft: false
+showToc: true
+TocOpen: true
 ---
 
 # Blog
