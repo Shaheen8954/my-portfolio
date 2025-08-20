@@ -6,9 +6,6 @@ draft: false
 showToc: true
 TocOpen: true
 ---
-
-# About Me
-
 ## Who I Am
 
 I'm **Shaheen**, a dedicated software engineer with a passion for creating innovative solutions that make a difference. With several years of experience in full-stack development, I specialize in building scalable web applications and robust backend systems.

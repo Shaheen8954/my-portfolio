@@ -7,7 +7,6 @@ showToc: true
 TocOpen: true
 ---
 
-# Blog
 
 Welcome to my blog! Here I share insights, tutorials, and thoughts about software development, technology trends, and my journey as a developer.
 
