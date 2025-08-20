@@ -34,22 +34,6 @@ fi
 
 print_status "Hugo version: $(hugo version)"
 
-# Clean previous build
-print_status "Cleaning previous build..."
-rm -rf public/
-
-# Build the site
-print_status "Building site with Hugo..."
-hugo --minify
-
-# Check if build was successful
-if [ ! -d "public" ]; then
-    print_error "Build failed! public directory not found."
-    exit 1
-fi
-
-print_status "Site built successfully!"
-
 # Check if we're in a git repository
 if [ ! -d ".git" ]; then
     print_warning "Not in a git repository. Skipping deployment."
@@ -58,8 +42,24 @@ if [ ! -d ".git" ]; then
 fi
 
 # Check if public is a git submodule
-if [ -f "public/.git" ]; then
+if [ -f "public/.git" ] || [ -d "public/.git" ]; then
     print_status "Detected public/ as git submodule. Deploying to GitHub Pages..."
+    
+    # Clean the submodule directory
+    print_status "Cleaning submodule directory..."
+    rm -rf public/*
+    
+    # Build the site into the submodule
+    print_status "Building site with Hugo..."
+    hugo --minify --destination public/
+    
+    # Check if build was successful
+    if [ ! -f "public/index.html" ]; then
+        print_error "Build failed! index.html not found in public directory."
+        exit 1
+    fi
+    
+    print_status "Site built successfully!"
     
     # Navigate to public directory
     cd public
@@ -93,6 +93,11 @@ else
     echo "2. Add your GitHub Pages repository as a submodule:"
     echo "   git submodule add https://github.com/Shaheen8954/my-portfolio-pages.git public"
     echo "3. Run this script again"
+    
+    # Build the site anyway for manual deployment
+    print_status "Building site for manual deployment..."
+    hugo --minify
+    print_status "Site built in public/ directory. You can manually deploy the contents."
 fi
 
 print_status "🎉 Deployment process completed!" 
