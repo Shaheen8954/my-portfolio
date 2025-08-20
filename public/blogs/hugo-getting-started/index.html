@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Hugo Static Site Generator | Shaheen&#39;s Portfolio</title>
+    <meta name="description" content="Complete guide to building fast, secure websites with Hugo - the world&#39;s fastest static site generator">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:1313/blogs/hugo-getting-started/">
+    <meta property="og:title" content="Getting Started with Hugo Static Site Generator">
+    <meta property="og:description" content="Complete guide to building fast, secure websites with Hugo - the world&#39;s fastest static site generator">
+    
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://localhost:1313/blogs/hugo-getting-started/">
+    <meta property="twitter:title" content="Getting Started with Hugo Static Site Generator">
+    <meta property="twitter:description" content="Complete guide to building fast, secure websites with Hugo - the world&#39;s fastest static site generator">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 2rem 0;
+        }
+        
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Shaheen&#39;s Portfolio</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="content">
+                
+<article>
+    <header>
+        <h1>Getting Started with Hugo Static Site Generator</h1>
+        
+        <p class="meta">
+            <time datetime="2025-01-27T00:00:00Z">
+                January 27, 2025
+            </time>
+            
+            <span class="tags">
+                
+                <span class="tag">Hugo</span>
+                
+                <span class="tag">Static Sites</span>
+                
+                <span class="tag">Web Development</span>
+                
+                <span class="tag">Tutorial</span>
+                
+            </span>
+            
+        </p>
+        
+    </header>
+    
+    <div class="content">
+        <h1 id="getting-started-with-hugo-static-site-generator">Getting Started with Hugo Static Site Generator</h1>
+<p>Hugo is one of the most popular static site generators, known for its incredible speed and flexibility. In this comprehensive guide, I&rsquo;ll walk you through setting up your first Hugo site, from installation to deployment.</p>
+<h2 id="what-is-hugo">What is Hugo?</h2>
+<p>Hugo is a fast and modern static site generator written in Go. It&rsquo;s designed to be:</p>
+<ul>
+<li><strong>Blazingly Fast</strong>: Builds sites in milliseconds</li>
+<li><strong>Flexible</strong>: Supports various content types and themes</li>
+<li><strong>Easy to Use</strong>: Simple command-line interface</li>
+<li><strong>Extensible</strong>: Rich templating system and plugins</li>
+</ul>
+<h2 id="why-choose-hugo">Why Choose Hugo?</h2>
+<h3 id="performance-benefits">Performance Benefits</h3>
+<ul>
+<li><strong>Lightning-fast builds</strong>: Sites with thousands of pages build in seconds</li>
+<li><strong>Excellent SEO</strong>: Static sites are naturally SEO-friendly</li>
+<li><strong>Security</strong>: No server-side code execution</li>
+<li><strong>Scalability</strong>: Can handle millions of pages efficiently</li>
+</ul>
+<h3 id="developer-experience">Developer Experience</h3>
+<ul>
+<li><strong>Live Reload</strong>: Instant preview during development</li>
+<li><strong>Rich Ecosystem</strong>: Hundreds of themes and plugins</li>
+<li><strong>Markdown Support</strong>: Write content in familiar Markdown</li>
+<li><strong>Version Control Friendly</strong>: All content is text-based</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Go 1.18 or later (for Hugo Extended)</li>
+<li>Git for version control</li>
+</ul>
+<h3 id="installing-hugo">Installing Hugo</h3>
+<h4 id="on-macos-using-homebrew">On macOS (using Homebrew)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><h4 id="on-windows-using-chocolatey">On Windows (using Chocolatey)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>choco install hugo-extended
+</span></span></code></pre></div><h4 id="on-linux">On Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Download the latest release</span>
+</span></span><span style="display:flex;"><span>wget https://github.com/gohugoio/hugo/releases/download/v0.120.0/hugo_extended_0.120.0_linux-amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i hugo_extended_0.120.0_linux-amd64.deb
+</span></span></code></pre></div><h4 id="manual-installation">Manual Installation</h4>
+<ol>
+<li>Visit <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a></li>
+<li>Download the appropriate version for your OS</li>
+<li>Extract and add to your PATH</li>
+</ol>
+<h2 id="creating-your-first-site">Creating Your First Site</h2>
+<h3 id="1-create-a-new-site">1. Create a New Site</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-portfolio
+</span></span><span style="display:flex;"><span>cd my-portfolio
+</span></span></code></pre></div><h3 id="2-add-a-theme">2. Add a Theme</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Initialize git repository</span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add theme as submodule</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Or clone directly</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></div><h3 id="3-configure-your-site">3. Configure Your Site</h3>
+<p>Edit <code>hugo.yaml</code> (or <code>config.toml</code>/<code>config.yaml</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">baseURL</span>: <span style="color:#e6db74">&#39;https://example.com/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">languageCode</span>: <span style="color:#e6db74">&#39;en-us&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#39;My Portfolio&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">theme</span>: <span style="color:#e6db74">&#39;ananke&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Site parameters</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;My personal portfolio website&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Menu configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">menu</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">main</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">about</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">About</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/about/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">projects</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Projects</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/projects/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">identifier</span>: <span style="color:#ae81ff">blog</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Blog</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">/blog/</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">weight</span>: <span style="color:#ae81ff">30</span>
+</span></span></code></pre></div><h2 id="content-structure">Content Structure</h2>
+<h3 id="understanding-hugos-content-organization">Understanding Hugo&rsquo;s Content Organization</h3>
+<p>Hugo uses a specific directory structure:</p>
+<pre tabindex="0"><code>my-portfolio/
+├── content/           # Your content files
+│   ├── _index.md     # Homepage
+│   ├── about/
+│   │   └── _index.md # About page
+│   ├── projects/
+│   │   ├── _index.md # Projects listing
+│   │   ├── project1.md
+│   │   └── project2.md
+│   └── blog/
+│       ├── _index.md # Blog listing
+│       ├── post1.md
+│       └── post2.md
+├── layouts/          # Custom templates
+├── static/           # Static assets
+├── themes/           # Theme files
+└── hugo.yaml         # Configuration
+</code></pre><h3 id="creating-content">Creating Content</h3>
+<h4 id="homepage">Homepage</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new _index.md
+</span></span></code></pre></div><p>Content for <code>content/_index.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Welcome to My Portfolio&#34;
+</span></span><span style="display:flex;"><span>description: &#34;Full-Stack Developer and Software Engineer&#34;
+</span></span><span style="display:flex;"><span>date: 2025-01-27
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Welcome to My Portfolio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hi, I&#39;m [Your Name], a passionate developer...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Featured Projects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Project 1</span>](<span style="color:#a6e22e">/projects/project1/</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Project 2</span>](<span style="color:#a6e22e">/projects/project2/</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Latest Blog Posts
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Getting Started with Hugo</span>](<span style="color:#a6e22e">/blog/hugo-getting-started/</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Modern Web Development</span>](<span style="color:#a6e22e">/blog/modern-web-dev/</span>)
+</span></span></code></pre></div><h4 id="blog-posts">Blog Posts</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new blog/my-first-post.md
+</span></span></code></pre></div><p>Content for <code>content/blog/my-first-post.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My First Blog Post&#34;
+</span></span><span style="display:flex;"><span>description: &#34;Introduction to my blog and what I&#39;ll be writing about&#34;
+</span></span><span style="display:flex;"><span>date: 2025-01-27
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>tags: [&#34;blog&#34;, &#34;introduction&#34;]
+</span></span><span style="display:flex;"><span>categories: [&#34;general&#34;]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># My First Blog Post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Welcome to my blog! In this post, I&#39;ll share...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## What I&#39;ll Be Writing About
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Web development tutorials
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Technology insights
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Project showcases
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Career advice
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Stay Connected
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Follow me on [<span style="color:#f92672">GitHub</span>](<span style="color:#a6e22e">https://github.com/yourusername</span>) and [<span style="color:#f92672">LinkedIn</span>](<span style="color:#a6e22e">https://linkedin.com/in/yourusername</span>).
+</span></span></code></pre></div><h4 id="project-pages">Project Pages</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new projects/my-awesome-project.md
+</span></span></code></pre></div><p>Content for <code>content/projects/my-awesome-project.md</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My Awesome Project&#34;
+</span></span><span style="display:flex;"><span>description: &#34;A full-stack web application built with modern technologies&#34;
+</span></span><span style="display:flex;"><span>date: 2025-01-27
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>tags: [&#34;React&#34;, &#34;Node.js&#34;, &#34;Full-Stack&#34;]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># My Awesome Project
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Project Overview
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>This project demonstrates...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Technologies Used
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Frontend**: React, TypeScript, Tailwind CSS
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Backend**: Node.js, Express, PostgreSQL
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Deployment**: Docker, AWS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Features
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Feature 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Feature 2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Feature 3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Live Demo
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">View Live Demo</span>](<span style="color:#a6e22e">https://demo.example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Source Code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">GitHub Repository</span>](<span style="color:#a6e22e">https://github.com/yourusername/project</span>)
+</span></span></code></pre></div><h2 id="development-workflow">Development Workflow</h2>
+<h3 id="1-start-development-server">1. Start Development Server</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>This command:</p>
+<ul>
+<li>Starts a local development server (usually at <code>http://localhost:1313</code>)</li>
+<li>Enables live reload (changes appear instantly)</li>
+<li>Includes draft content (<code>-D</code> flag)</li>
+</ul>
+<h3 id="2-build-for-production">2. Build for Production</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><p>This creates a <code>public/</code> directory with your static site.</p>
+<h3 id="3-build-with-drafts">3. Build with Drafts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo -D
+</span></span></code></pre></div><h3 id="4-build-with-future-posts">4. Build with Future Posts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo -F
+</span></span></code></pre></div><h2 id="customization">Customization</h2>
+<h3 id="custom-layouts">Custom Layouts</h3>
+<p>Create custom templates in <code>layouts/</code>:</p>
+<pre tabindex="0"><code>layouts/
+├── _default/
+│   ├── baseof.html
+│   ├── list.html
+│   └── single.html
+├── partials/
+│   ├── header.html
+│   ├── footer.html
+│   └── navigation.html
+└── shortcodes/
+    └── youtube.html
+</code></pre><h3 id="example-custom-layout">Example Custom Layout</h3>
+<p><code>layouts/_default/baseof.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.LanguageCode }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;{{ .Title }} | {{ .Site.Title }}&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Description }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ $style := resources.Get &#34;css/main.css&#34; | resources.ToCSS | resources.Minify }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.RelPermalink }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ partial &#34;header.html&#34; . }}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ block &#34;main&#34; . }}{{ end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    {{ partial &#34;footer.html&#34; . }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="custom-shortcodes">Custom Shortcodes</h3>
+<p>Create reusable content components:</p>
+<p><code>layouts/shortcodes/youtube.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">iframe</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;560&#34;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;315&#34;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.youtube.com/embed/{{ .Get 0 }}&#34;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">allowfullscreen</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Usage in content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+</span></span></code></pre></div><h2 id="deployment-options">Deployment Options</h2>
+<h3 id="github-pages">GitHub Pages</h3>
+<ol>
+<li><strong>Create GitHub Repository</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin https://github.com/username/repository.git
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><ol start="2">
+<li><strong>Set up GitHub Actions</strong></li>
+</ol>
+<p>Create <code>.github/workflows/hugo.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#e6db74">&#34;main&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#34;pages&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">defaults</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shell</span>: <span style="color:#ae81ff">bash</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Hugo CLI</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.120.0/hugo_extended_0.120.0_linux-amd64.deb
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          sudo dpkg -i ${{ runner.temp }}/hugo.deb</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#ae81ff">recursive</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/configure-pages@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build with Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_ENVIRONMENT</span>: <span style="color:#ae81ff">production</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_ENV</span>: <span style="color:#ae81ff">production</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          hugo \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --gc \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --minify \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">github-pages</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">${{ steps.deployment.outputs.page_url }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span></code></pre></div><h3 id="netlify">Netlify</h3>
+<ol>
+<li>
+<p><strong>Connect Repository</strong></p>
+<ul>
+<li>Connect your GitHub repository to Netlify</li>
+<li>Set build command: <code>hugo</code></li>
+<li>Set publish directory: <code>public</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Environment Variables</strong></p>
+<ul>
+<li><code>HUGO_VERSION</code>: <code>0.120.0</code></li>
+<li><code>HUGO_ENV</code>: <code>production</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="vercel">Vercel</h3>
+<ol>
+<li><strong>Install Vercel CLI</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm i -g vercel
+</span></span></code></pre></div><ol start="2">
+<li><strong>Deploy</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vercel
+</span></span></code></pre></div><h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="1-image-optimization">1. Image Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install Hugo Image Processing</span>
+</span></span><span style="display:flex;"><span>go install github.com/hugo-fixit/FixIt@latest
+</span></span></code></pre></div><h3 id="2-cssjs-minification">2. CSS/JS Minification</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># In hugo.yaml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">minify</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableCSS</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableHTML</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableJS</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableJSON</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableSVG</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableXML</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tdewolff</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">css</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepCSS2</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">precision</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">html</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepComments</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepConditionalComments</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepDefaultAttrVals</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepDocumentTags</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepEndTags</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepQuotes</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepWhitespace</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">js</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepVarNames</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">precision</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">json</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">precision</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">svg</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">precision</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">xml</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">keepWhitespace</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="3-asset-pipeline">3. Asset Pipeline</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># In hugo.yaml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">assets</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disableFingerprinting</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">minify</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">css</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">js</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h2 id="best-practices">Best Practices</h2>
+<h3 id="1-content-organization">1. Content Organization</h3>
+<ul>
+<li>Use descriptive filenames</li>
+<li>Organize content in logical directories</li>
+<li>Use consistent front matter</li>
+</ul>
+<h3 id="2-performance">2. Performance</h3>
+<ul>
+<li>Optimize images before adding to static/</li>
+<li>Use Hugo&rsquo;s built-in asset pipeline</li>
+<li>Minimize external dependencies</li>
+</ul>
+<h3 id="3-seo">3. SEO</h3>
+<ul>
+<li>Write descriptive titles and descriptions</li>
+<li>Use proper heading hierarchy</li>
+<li>Include meta tags and Open Graph data</li>
+</ul>
+<h3 id="4-maintenance">4. Maintenance</h3>
+<ul>
+<li>Keep Hugo and themes updated</li>
+<li>Regular backups of content</li>
+<li>Monitor site performance</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Theme Not Found</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Ensure theme is properly installed</span>
+</span></span><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Build Errors</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check for syntax errors</span>
+</span></span><span style="display:flex;"><span>hugo --verbose
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Missing Content</strong></p>
+<ul>
+<li>Check file permissions</li>
+<li>Verify front matter syntax</li>
+<li>Ensure files are in correct directories</li>
+</ul>
+</li>
+</ol>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
+<li><a href="https://themes.gohugo.io/">Hugo Themes</a></li>
+<li><a href="https://discourse.gohugo.io/">Hugo Discourse</a></li>
+<li><a href="https://github.com/gohugoio/hugo">Hugo GitHub Repository</a></li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Hugo is an excellent choice for building fast, secure, and maintainable websites. Its speed, flexibility, and rich ecosystem make it perfect for portfolios, blogs, documentation sites, and more.</p>
+<p>Start building your Hugo site today and experience the power of static site generation!</p>
+<hr>
+<p><em>Have questions about Hugo? Feel free to reach out or check out the official documentation for more detailed information.</em></p>
+
+    </div>
+    
+    
+    <footer class="article-footer">
+        <h3>Tags:</h3>
+        <div class="tags">
+            
+            <span class="tag">Hugo</span>
+            
+            <span class="tag">Static Sites</span>
+            
+            <span class="tag">Web Development</span>
+            
+            <span class="tag">Tutorial</span>
+            
+        </div>
+    </footer>
+    
+</article>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shaheen&#39;s Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Shaheen8954" title="GitHub">🐙</a>
+                <a href="https://linkedin.com/in/shaheen8954" title="LinkedIn">💼</a>
+                <a href="mailto:contact@shaheen.homes" title="Email">📧</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

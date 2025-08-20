@@ -7,7 +7,7 @@ draft: false
 
 # Welcome to My Portfolio
 
-## Hi, I'm Shaheen 👋
+
 
 I'm a passionate **Full-Stack Developer** and **Software Engineer** with expertise in modern web technologies. I love building scalable applications and solving complex problems through clean, efficient code.
 
