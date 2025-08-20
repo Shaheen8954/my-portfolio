@@ -1,5 +1,5 @@
-# Hugo generated files
-# public/  # Temporarily commented out to add submodule
+# Hugo generated files (but allow submodule)
+# public/  # Submodule - don't ignore
 resources/
 .hugo_build.lock
 
