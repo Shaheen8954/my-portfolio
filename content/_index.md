@@ -5,10 +5,6 @@ date: 2025-01-27
 draft: false
 ---
 
-# Welcome to My Portfolio
-
-
-
 I'm a passionate **Full-Stack Developer** and **Software Engineer** with expertise in modern web technologies. I love building scalable applications and solving complex problems through clean, efficient code.
 
 ### What I Do
