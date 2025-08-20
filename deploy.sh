@@ -2,6 +2,7 @@
 
 # Deploy script for Hugo portfolio site
 # This script builds the site and deploys it to GitHub Pages
+# Compatible with both local deployment and CI/CD workflows
 
 set -e  # Exit on any error
 
@@ -64,6 +65,9 @@ if [ -f "public/.git" ] || [ -d "public/.git" ]; then
     # Navigate to public directory
     cd public
     
+    # Configure git to handle conflicts
+    git config pull.rebase false
+    
     # Check if there are changes
     if git diff --quiet && git diff --cached --quiet; then
         print_warning "No changes detected. Deployment skipped."
@@ -78,9 +82,24 @@ if [ -f "public/.git" ] || [ -d "public/.git" ]; then
     COMMIT_MESSAGE="Update site content - $(date '+%Y-%m-%d %H:%M:%S')"
     git commit -m "$COMMIT_MESSAGE"
     
+    # Pull any remote changes and handle conflicts
+    print_status "Syncing with remote repository..."
+    if ! git pull origin main --no-rebase; then
+        print_warning "Merge conflict detected. Attempting to resolve..."
+        # If there's a conflict, we'll try to resolve it
+        git status
+        print_error "Please resolve conflicts manually and then run: git push origin main"
+        cd ..
+        exit 1
+    fi
+    
     # Push to remote
     print_status "Pushing changes to GitHub Pages..."
-    git push origin main
+    if ! git push origin main; then
+        print_error "Push failed. Please check your git configuration and try again."
+        cd ..
+        exit 1
+    fi
     
     cd ..
     print_status "✅ Deployment completed successfully!"
